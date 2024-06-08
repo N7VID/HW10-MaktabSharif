@@ -33,5 +33,6 @@
 
 .selected-box .option-container.active + .selected::after {
   transform: rotateX(180deg);
+  transition: all 0.2s ease;
   top: -15px;
 }
