@@ -6,30 +6,63 @@
     <title>List box</title>
     <link href="./output.css" rel="stylesheet" />
   </head>
-  <body>
-    <div class="container">
-      <h2>List Box</h2>
-      <div>
-        <div>Select...</div>
-        <div>
-          <label for="tom-cook">Tom Cook</label>
-          <input type="radio" id="tom-cook" name="person" />
+  <body class="font-sans bg-[#f7f6ff]">
+    <div class="container max-w-96 mx-auto mt-[100px]">
+      <h2 class="m-4 font-bold text-lg">List Box</h2>
+
+      <div class="selected-box flex w-[400px] flex-col">
+        <div
+          class="option-container bg-[#2f3640] text-[#f5f6fa] transition-all rounded-lg overflow-hidden w-full max-h-0 opacity-0 order-1"
+        >
+          <div class="option py-3 px-6 cursor-pointer hover:bg-[#414b57]">
+            <input type="radio" id="tom-cook" name="person" class="sr-only" />
+            <label for="tom-cook" class="cursor-pointer">Tom Cook</label>
+          </div>
+          <div class="option py-3 px-6 cursor-pointer hover:bg-[#414b57]">
+            <input
+              type="radio"
+              id="wade-cooper"
+              name="person"
+              class="sr-only"
+            />
+            <label for="wade-cooper" class="cursor-pointer">Wade Cooper</label>
+          </div>
+          <div class="option py-3 px-6 cursor-pointer hover:bg-[#414b57]">
+            <input type="radio" id="tanya-fox" name="person" class="sr-only" />
+            <label for="tanya-fox" class="cursor-pointer">Tanya Fox</label>
+          </div>
+          <div class="option py-3 px-6 cursor-pointer hover:bg-[#414b57]">
+            <input
+              type="radio"
+              id="arlene-mccoy"
+              name="person"
+              class="sr-only"
+            />
+            <label for="arlene-mccoy" class="cursor-pointer"
+              >Arlene Mccoy</label
+            >
+          </div>
+          <div class="option py-3 px-6 cursor-pointer hover:bg-[#414b57]">
+            <input type="radio" id="devon-webb" name="person" class="sr-only" />
+            <label for="devon-webb" class="cursor-pointer">Devon Webb</label>
+          </div>
+          <div class="option py-3 px-6 cursor-pointer hover:bg-[#414b57]">
+            <input type="radio" id="devon-webb" name="person" class="sr-only" />
+            <label for="devon-webb" class="cursor-pointer">Devon Webb</label>
+          </div>
+          <div class="option py-3 px-6 cursor-pointer hover:bg-[#414b57]">
+            <input type="radio" id="devon-webb" name="person" class="sr-only" />
+            <label for="devon-webb" class="cursor-pointer">Devon Webb</label>
+          </div>
+          <div class="option py-3 px-6 cursor-pointer hover:bg-[#414b57]">
+            <input type="radio" id="devon-webb" name="person" class="sr-only" />
+            <label for="devon-webb" class="cursor-pointer">Devon Webb</label>
+          </div>
         </div>
-        <div>
-          <label for="wade-cooper">Wade Cooper</label>
-          <input type="radio" id="wade-cooper" name="person" />
-        </div>
-        <div>
-          <label for="tanya-fox">Tanya Fox</label>
-          <input type="radio" id="tanya-fox" name="person" />
-        </div>
-        <div>
-          <label for="arlene-mccoy">Arlene Mccoy</label>
-          <input type="radio" id="arlene-mccoy" name="person" />
-        </div>
-        <div>
-          <label for="devon-webb">Devon Webb</label>
-          <input type="radio" id="devon-webb" name="person" />
+        <div
+          class="selected option py-3 px-6 cursor-pointer bg-[#2f3640] text-[#f5f6fa] rounded-lg mb-2 relative -order-none"
+        >
+          Select...
         </div>
       </div>
     </div>
