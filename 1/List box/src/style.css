@@ -36,3 +36,10 @@
   transition: all 0.2s ease;
   top: -15px;
 }
+
+label::before {
+  content: url("../image/check-regular-24.png");
+  position: absolute;
+  top: 8px;
+  left: 8px;
+}
