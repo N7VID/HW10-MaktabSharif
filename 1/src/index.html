@@ -151,8 +151,8 @@
       <h2 class="mb-12 font-bold text-3xl text-center">Disclosure</h2>
       <div class="bg-[#2f3640] text-white py-7 rounded-xl">
         <div
-          id="see-ans1"
           class="flex justify-between pb-7 px-10 hover:text-gray-300 items-center font-semibold cursor-default transition"
+          onclick='showResult(answerOne, "arrow-down1", "arrow-up1")'
         >
           <p>What is your refund policy?</p>
           <div id="arrow-down1">
@@ -168,6 +168,7 @@
         <div
           id="see-ans2"
           class="flex justify-between border-t-[1px] border-gray-500 pt-7 px-10 hover:text-gray-300 items-center font-semibold cursor-default transition"
+          onclick='showResult(answerTwo, "arrow-down2", "arrow-up2")'
         >
           <p>Do you offer technical support?</p>
           <div id="arrow-down2">
