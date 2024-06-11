@@ -685,6 +685,10 @@ video {
   margin-left: 4px;
 }
 
+.mb-40 {
+  margin-bottom: 10rem;
+}
+
 .flex {
   display: flex;
 }
@@ -763,6 +767,10 @@ video {
 
 .max-w-20 {
   max-width: 5rem;
+}
+
+.max-w-40 {
+  max-width: 10rem;
 }
 
 .translate-x-7 {
@@ -941,6 +949,22 @@ video {
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
+}
+
+.duration-100 {
+  transition-duration: 100ms;
+}
+
+.duration-200 {
+  transition-duration: 200ms;
+}
+
+.duration-300 {
+  transition-duration: 300ms;
+}
+
+.duration-700 {
+  transition-duration: 700ms;
 }
 
 .selected-box .option-container.active {
