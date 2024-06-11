@@ -645,10 +645,6 @@ video {
   margin-top: 100px;
 }
 
-.block {
-  display: block;
-}
-
 .flex {
   display: flex;
 }
@@ -880,18 +876,6 @@ video {
 
 .opacity-0 {
   opacity: 0;
-}
-
-.opacity-50 {
-  opacity: 0.5;
-}
-
-.opacity-30 {
-  opacity: 0.3;
-}
-
-.opacity-90 {
-  opacity: 0.9;
 }
 
 .transition {
