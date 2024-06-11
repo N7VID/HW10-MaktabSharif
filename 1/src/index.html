@@ -3,8 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Problem 1</title>
+    <title>Components</title>
     <link href="./output.css" rel="stylesheet" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <script src="script.js" defer></script>
   </head>
   <body class="font-sans bg-[#f7f6ff]">
@@ -116,7 +120,7 @@
         ></div>
       </div>
     </div>
-    <div class="container max-w-lg mx-auto mb-40">
+    <div class="container max-w-lg mx-auto mb-52">
       <h2 class="mb-12 font-bold text-3xl text-center">Tabs</h2>
       <div class="btns space-x-3 text-lg mb-3" id="btns">
         <button
@@ -142,6 +146,39 @@
         class="bg-[#2f3640] py-4 px-3 text-white rounded-xl"
         id="posts"
       ></div>
+    </div>
+    <div class="container max-w-xl mx-auto mb-52">
+      <h2 class="mb-12 font-bold text-3xl text-center">Disclosure</h2>
+      <div class="bg-[#2f3640] text-white py-7 rounded-xl">
+        <div
+          id="see-ans1"
+          class="flex justify-between pb-7 px-10 hover:text-gray-300 items-center font-semibold cursor-default transition"
+        >
+          <p>What is your refund policy?</p>
+          <div id="arrow-down1">
+            <i class="bx bx-chevron-down text-xl"></i>
+          </div>
+          <div id="arrow-up1" class="hidden">
+            <i class="bx bx-chevron-up text-xl"></i>
+          </div>
+        </div>
+        <div class="ans pb-7 px-10 text-gray-400 hidden" id="ans-1">
+          If you're unhappy with your purchase, we'll refund you in full.
+        </div>
+        <div
+          id="see-ans2"
+          class="flex justify-between border-t-[1px] border-gray-500 pt-7 px-10 hover:text-gray-300 items-center font-semibold cursor-default transition"
+        >
+          <p>Do you offer technical support?</p>
+          <div id="arrow-down2">
+            <i class="bx bx-chevron-down text-xl"></i>
+          </div>
+          <div id="arrow-up2" class="hidden">
+            <i class="bx bx-chevron-up text-xl"></i>
+          </div>
+        </div>
+        <div class="ans pt-7 px-10 text-gray-400 hidden" id="ans-2">No.</div>
+      </div>
     </div>
   </body>
 </html>

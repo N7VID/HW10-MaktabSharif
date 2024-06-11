@@ -53,6 +53,11 @@ const recentBtn = document.getElementById("Recent");
 const popularBtn = document.getElementById("Popular");
 const trendingBtn = document.getElementById("Trending");
 
+const showResultBtn = document.getElementById("see-ans1");
+const answerOne = document.getElementById("ans-1");
+const showResultBtn2 = document.getElementById("see-ans2");
+const answerTwo = document.getElementById("ans-2");
+
 selected.addEventListener("click", () => {
   optionsContainer.classList.toggle("active");
 });
@@ -128,3 +133,15 @@ trendingBtn.addEventListener("click", () => {
 });
 
 renderData(recent);
+
+showResultBtn.addEventListener("click", () => {
+  answerOne.classList.toggle("hidden");
+  document.getElementById("arrow-down1").classList.toggle("hidden");
+  document.getElementById("arrow-up1").classList.toggle("hidden");
+});
+
+showResultBtn2.addEventListener("click", () => {
+  answerTwo.classList.toggle("hidden");
+  document.getElementById("arrow-down2").classList.toggle("hidden");
+  document.getElementById("arrow-up2").classList.toggle("hidden");
+});
