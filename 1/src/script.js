@@ -1,3 +1,4 @@
+// Add some data for Tabs component
 const recent = [
   {
     title: "Does drinking coffee make you smarter?",
@@ -40,28 +41,31 @@ const trending = [
     shares: "2",
   },
 ];
-
+// Select some needed elements for List Box component
 const selected = document.querySelector(".selected");
 const optionsContainer = document.querySelector(".option-container");
-
 const options = document.querySelectorAll(".option");
+// Select some needed elements for Switch component
 const switchBtn = document.getElementById("Switch");
 const switchCir = document.getElementById("circle");
+// Select some needed elements for Tabs component
 const buttons = document.getElementById("btns");
 const postContainer = document.getElementById("posts");
 const recentBtn = document.getElementById("Recent");
 const popularBtn = document.getElementById("Popular");
 const trendingBtn = document.getElementById("Trending");
-
+// Select some needed elements for Disclosure component
 const showResultBtn = document.getElementById("see-ans1");
 const answerOne = document.getElementById("ans-1");
 const showResultBtn2 = document.getElementById("see-ans2");
 const answerTwo = document.getElementById("ans-2");
 
+// List Box component
+// Show the list of options in List Box component
 selected.addEventListener("click", () => {
   optionsContainer.classList.toggle("active");
 });
-
+// Change innerHtml when one of options clicked in List Box component
 options.forEach((option) => {
   option.addEventListener("click", () => {
     selected.innerHTML = option.querySelector("label").innerHTML;
@@ -69,10 +73,12 @@ options.forEach((option) => {
   });
 });
 
+// Switch component
 switchBtn.addEventListener("click", () => {
   switchCir.classList.toggle("translate-x-11");
 });
 
+// Tabs component
 function renderData(data) {
   postContainer.innerText = "";
   data.forEach((item) => {
@@ -134,6 +140,7 @@ trendingBtn.addEventListener("click", () => {
 
 renderData(recent);
 
+// Disclosure component
 showResultBtn.addEventListener("click", () => {
   answerOne.classList.toggle("hidden");
   document.getElementById("arrow-down1").classList.toggle("hidden");
