@@ -57,6 +57,5 @@ label::before {
   color: white;
 }
 .active:hover {
-  background-color: #2f3640;
   color: white;
 }
