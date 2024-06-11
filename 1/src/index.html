@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>List box</title>
+    <title>Problem 1</title>
     <link href="./output.css" rel="stylesheet" />
     <script src="script.js" defer></script>
   </head>
   <body class="font-sans bg-[#f7f6ff]">
-    <div class="container max-w-96 mx-auto mt-[100px] mb-40">
+    <div class="container max-w-96 mx-auto mt-[100px] mb-52">
       <h2 class="mb-8 font-bold text-3xl text-center">List Box</h2>
 
       <div class="selected-box flex w-[400px] flex-col">
@@ -104,7 +104,7 @@
         </div>
       </div>
     </div>
-    <div>
+    <div class="mb-52">
       <h2 class="mb-8 font-bold text-3xl text-center">Switch</h2>
       <div
         class="container bg-[#2f3640] max-w-20 min-h-9 mx-auto rounded-3xl flex items-center cursor-pointer"
@@ -115,6 +115,33 @@
           id="circle"
         ></div>
       </div>
+    </div>
+    <div class="container max-w-lg mx-auto mb-40">
+      <h2 class="mb-12 font-bold text-3xl text-center">Tabs</h2>
+      <div class="btns space-x-3 text-lg mb-3" id="btns">
+        <button
+          class="px-3 py-[2px] rounded-3xl transition cursor-default font-semibold active"
+          id="Recent"
+        >
+          Recent
+        </button>
+        <button
+          class="hover:bg-slate-300 px-3 py-[2px] rounded-3xl transition cursor-default font-semibold"
+          id="Popular"
+        >
+          Popular
+        </button>
+        <button
+          class="hover:bg-slate-300 px-3 py-[2px] rounded-3xl transition cursor-default font-semibold"
+          id="Trending"
+        >
+          Trending
+        </button>
+      </div>
+      <div
+        class="bg-[#2f3640] py-4 px-3 text-white rounded-xl"
+        id="posts"
+      ></div>
     </div>
   </body>
 </html>
