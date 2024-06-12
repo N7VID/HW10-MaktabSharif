@@ -24,12 +24,16 @@ let appStatus = {
 
 let page = 1;
 let totalPages;
-const limit = 20;
+const limit = 10;
 let totalCount;
+let currentSort = "";
+let searchQuery = "";
 
-function getUserList(query = "") {
+function getUserList(page = 1, limit = 10, currentSort = "") {
   try {
-    fetch(`${BASE_URL}/Users?${query}&_page=${page}&_limit=${limit}`)
+    fetch(
+      `${BASE_URL}/Users?_page=${page}&_limit=${limit}&${currentSort}&q=${searchQuery}`
+    )
       .then((response) => {
         if (!response.ok) {
           console.log(error);
@@ -214,14 +218,14 @@ function toggleButtons(disable) {
 function nextPageButtonHandler() {
   if (page < totalPages) {
     page++;
-    getUserList();
+    getUserList(page, limit, currentSort);
   }
 }
 
 function prevPageButtonHandler() {
   if (page > 1) {
     page--;
-    getUserList();
+    getUserList(page, limit, currentSort);
   }
 }
 
@@ -255,17 +259,17 @@ function notification(message) {
 }
 
 function sortUser(order) {
-  let url = `$&_sort=id`;
+  currentSort = `_sort=id`;
   if (order === "desc") {
-    url += "&_order=desc";
+    currentSort += "&_order=desc";
   }
-  getUserList(url);
+  getUserList(page, limit, currentSort);
 }
 
 function handleSearch(event) {
-  const query = event.target.value.trim();
-  if (query) {
-    getUserList(`q=${query}`);
+  searchQuery = event.target.value.trim();
+  if (searchQuery) {
+    getUserList(page, limit, currentSort, searchQuery);
   }
 }
 
