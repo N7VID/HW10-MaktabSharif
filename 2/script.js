@@ -269,7 +269,7 @@ function sortUser(order) {
 function handleSearch(event) {
   searchQuery = event.target.value.trim();
   if (searchQuery) {
-    getUserList(page, limit, currentSort, searchQuery);
+    getUserList(page, limit, currentSort);
   }
 }
 
