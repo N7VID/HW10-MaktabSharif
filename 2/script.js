@@ -71,7 +71,7 @@ function postNewUser(newName, newJob, newEmail) {
       body: JSON.stringify(created),
     })
       .then((response) => {
-        getUserList();
+        getUserList(page, limit, currentSort);
         notification("Created!");
       })
       .catch((e) => console.log(e));
@@ -86,7 +86,7 @@ function deleteUser(id) {
       method: "DELETE",
     })
       .then((response) => {
-        getUserList();
+        getUserList(page, limit, currentSort);
         notification("Deleted!");
       })
       .catch((e) => console.log(e));
@@ -111,7 +111,7 @@ function putData(id, updatedName, updatedJob, updatedEmail) {
         if (!response.ok) {
           throw new Error(`Failed to update user: ${response.statusText}`);
         }
-        getUserList();
+        getUserList(page, limit, currentSort);
         notification("Updated!");
       })
       .catch((e) => console.log(e));
