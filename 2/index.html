@@ -16,6 +16,10 @@
       src="https://cdn.jsdelivr.net/npm/toastify-js"
       defer
     ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"
+      defer
+    ></script>
     <script src="script.js" defer></script>
   </head>
   <body>
@@ -35,8 +39,12 @@
       </form>
       <div class="actions">
         <div class="btns">
-          <button id="ASC">Sort by ID Ascending</button>
-          <button id="DESC">Sort by ID Descending</button>
+          <button id="ASC" onclick="sortUser('asc')">
+            Sort by ID Ascending
+          </button>
+          <button id="DESC" onclick="sortUser('desc')">
+            Sort by ID Descending
+          </button>
         </div>
         <div class="search">
           <label for="search">Search</label>

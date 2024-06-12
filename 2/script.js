@@ -13,6 +13,10 @@ const prevButton = document.getElementById("prev");
 const deleteButton = document.querySelectorAll(".del-btn");
 const cancelButton = document.getElementById("cancel");
 
+const ascOrderBtn = document.getElementById("ASC");
+const descOrderBtn = document.getElementById("DESC");
+const searchInput = document.getElementById("search");
+
 let appStatus = {
   editingUserId: null,
   isEditMode: false,
@@ -23,9 +27,9 @@ let totalPages;
 const limit = 20;
 let totalCount;
 
-function getUserList() {
+function getUserList(query = "") {
   try {
-    fetch(`${BASE_URL}/Users?_page=${page}&_limit=${limit}`)
+    fetch(`${BASE_URL}/Users?${query}&_page=${page}&_limit=${limit}`)
       .then((response) => {
         if (!response.ok) {
           console.log(error);
@@ -249,5 +253,22 @@ function notification(message) {
     },
   }).showToast();
 }
+
+function sortUser(order) {
+  let url = `$&_sort=id`;
+  if (order === "desc") {
+    url += "&_order=desc";
+  }
+  getUserList(url);
+}
+
+function handleSearch(event) {
+  const query = event.target.value.trim();
+  if (query) {
+    getUserList(`q=${query}`);
+  }
+}
+
+searchInput.addEventListener("input", _.debounce(handleSearch, 500));
 
 getUserList();
